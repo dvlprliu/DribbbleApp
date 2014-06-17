@@ -20,3 +20,7 @@ hasAnyMatch([28,283,12,4], {(n:Int) -> Bool in
         return n < 10
     
     })
+
+var a = 1;
+var b = a++
+var c = ++a
