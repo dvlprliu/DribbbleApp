@@ -26,9 +26,13 @@ class Shot {
     var createdAt:String?
     var image:UIImage?
     
-    
     init() {
         
     }
     
+}
+
+struct SomeStruct {
+    var shot:Shot = Shot()
+    var i:Int = 39
 }

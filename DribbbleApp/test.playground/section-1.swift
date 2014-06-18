@@ -21,6 +21,19 @@ hasAnyMatch([28,283,12,4], {(n:Int) -> Bool in
     
     })
 
-var a = 1;
-var b = a++
-var c = ++a
+
+
+struct Stack<T> {
+    var stackItem = T[]()
+    mutating func push(item:T) {
+        stackItem.append(item)
+    }
+    
+    mutating func pop() {
+        stackItem.removeLast()
+    }
+}
+var stackOfString = Stack<String>()
+stackOfString.push("bobo")
+stackOfString.push("Fofo")
+

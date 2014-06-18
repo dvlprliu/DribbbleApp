@@ -16,7 +16,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="-561" y="-75"/>
+            <point key="canvasLocation" x="-876" y="-550"/>
         </view>
     </objects>
 </document>

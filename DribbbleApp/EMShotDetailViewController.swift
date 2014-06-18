@@ -13,7 +13,7 @@ class EMShotDetailViewController: BaseViewController, UIWebViewDelegate {
     let shot:Shot?
     
     var webView:UIWebView?
-    
+
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
@@ -22,12 +22,24 @@ class EMShotDetailViewController: BaseViewController, UIWebViewDelegate {
     init(shot:Shot) {
         super.init(nibName:nil, bundle:nil)
         self.shot = shot
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = shot!.title
         setupWebView()
+        
+        
+        var s = SomeStruct()
+        var t = s
+        
+        t.shot.width = 333
+        t.i = 393
+        println(s)
+        println(t)
+        
+        
 
         // Do any additional setup after loading the view.
     }

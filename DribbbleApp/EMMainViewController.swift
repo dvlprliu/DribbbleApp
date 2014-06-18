@@ -40,7 +40,6 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
         
         getData();
         setupCollectionView()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +91,8 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
         _collectionView.delegate = self
         _collectionView.dataSource = self
         _collectionView.registerClass(ShotCell.self, forCellWithReuseIdentifier:"Cell")
+        
+        _collectionView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | .FlexibleHeight
         self.view.addSubview(_collectionView)
         
     }
@@ -141,10 +142,7 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView!) {
-        currentOffset = scrollView.contentOffset.y - CGRectGetHeight(self.view.frame)
-        if currentOffset > -100 {
-            
-        }
+      
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView!, willDecelerate decelerate: Bool) {
@@ -189,9 +187,9 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
     }
     
     func scale(originSize:CGSize) -> CGSize {
-        var baseWidth:Double = 150.0;
-        var retaio:Double = baseWidth / originSize.width
-        var height = originSize.height * retaio
+        var baseWidth:CGFloat = 150.0;
+        var retaio:CGFloat = baseWidth / originSize.width
+        var height:CGFloat = originSize.height * retaio
         
         return CGSize(width:150, height:height)
     }
