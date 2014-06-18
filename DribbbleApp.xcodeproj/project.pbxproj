@@ -16,6 +16,7 @@
 		461D7343194D6ED10044B372 /* EMMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D7341194D6ED10044B372 /* EMMainViewController.swift */; };
 		461D7344194D6ED10044B372 /* EMMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461D7342194D6ED10044B372 /* EMMainViewController.xib */; };
 		46523EB2194D7D9C00CBD927 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46523EB1194D7D9C00CBD927 /* Shot.swift */; };
+		469B864519512D1900FB55DF /* MTLShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469B864419512D1900FB55DF /* MTLShot.swift */; };
 		46AD5953194EF31A008A2CEF /* EMShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5952194EF31A008A2CEF /* EMShotDetailViewController.swift */; };
 		CF35323567EE4541AE3D3941 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D95DCFEFD14391A1C92B77 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		461D7341194D6ED10044B372 /* EMMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMainViewController.swift; sourceTree = "<group>"; };
 		461D7342194D6ED10044B372 /* EMMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMMainViewController.xib; sourceTree = "<group>"; };
 		46523EB1194D7D9C00CBD927 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		469B864419512D1900FB55DF /* MTLShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLShot.swift; sourceTree = "<group>"; };
 		46AD5952194EF31A008A2CEF /* EMShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMShotDetailViewController.swift; sourceTree = "<group>"; };
 		46AD5954194EF86E008A2CEF /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; };
 		A67EE12977D64FAD8B176F33 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				46523EB1194D7D9C00CBD927 /* Shot.swift */,
+				469B864419512D1900FB55DF /* MTLShot.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				46523EB2194D7D9C00CBD927 /* Shot.swift in Sources */,
 				460B953B194DBC800061A24B /* ShotCell.swift in Sources */,
 				461D733C194D6B130044B372 /* BaseNavigationViewController.swift in Sources */,
+				469B864519512D1900FB55DF /* MTLShot.swift in Sources */,
 				46AD5953194EF31A008A2CEF /* EMShotDetailViewController.swift in Sources */,
 				461D7322194D6AD40044B372 /* AppDelegate.swift in Sources */,
 				461D733A194D6AF30044B372 /* BaseViewController.swift in Sources */,

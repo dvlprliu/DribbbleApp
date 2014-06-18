@@ -4,3 +4,4 @@
 
 #import "SVProgressHUD.h"
 #import "AFNetworking.h"
+#import <Mantle/Mantle.h>

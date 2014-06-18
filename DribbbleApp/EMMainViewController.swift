@@ -13,6 +13,7 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
     var _collectionView:UICollectionView!
     var _data = Array<Shot>()
     var imagesUrl = Array<String>()
+    var downloadQueue:NSOperationQueue
     
     var currentPage = 0
     var totalPate = 0
@@ -21,7 +22,10 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
     var currentOffset = 0.0
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        
+        downloadQueue = NSOperationQueue()
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
         // Custom initialization
     }
     
@@ -62,7 +66,7 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
                 var shots = Array<Shot>()
                 for var i = 0;  i < datas.count; i++ {
                     var shotDict = datas[i] as NSDictionary!
-                    if let shot = self.parseData(shotDict) as Shot! {
+                    if let shot = self.parseData(shotDict) as? Shot {
                         shots.append(shot)
                     }
                 }
@@ -162,20 +166,26 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
         var shot = _data[indexPath.item]
         var url = NSURL.URLWithString(shot.imageUrl!)
         var request = NSURLRequest(URL: url)
-        NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue(), completionHandler:{(response:NSURLResponse!, data:NSData!, error: NSError!) -> Void in
-            
-            if error != nil {
-                println(error)
-                return;
-            }
-            var image = UIImage(data:data)
-            var shot = self._data[indexPath.item]
-            shot.image = image
-            var cell = self._collectionView.cellForItemAtIndexPath(indexPath) as? ShotCell
-            cell!.imageView!.image = shot.image
-            })
         
+        downloadQueue.addOperationWithBlock {
+            NSURLConnection.sendAsynchronousRequest(request, queue:NSOperationQueue.mainQueue(), completionHandler:{(response:NSURLResponse!, data:NSData!, error: NSError!) -> Void in
+                
+                if error != nil {
+                    println(error)
+                    return;
+                }
+                var image = UIImage(data:data)
+                var shot = self._data[indexPath.item]
+                shot.image = image
+                var cell:ShotCell? = self._collectionView.cellForItemAtIndexPath(indexPath) as? ShotCell
+                
+                if let aCell = cell {
+                    aCell.imageView!.image = shot.image
 
+                }
+                
+                })
+            }
     }
     
     func scale(originSize:CGSize) -> CGSize {
@@ -189,7 +199,7 @@ class EMMainViewController: BaseViewController, UICollectionViewDelegate, UIColl
     
     
     
-    func parseData(dict: NSDictionary) -> AnyObject? {
+    func parseData(dict: NSDictionary) -> AnyObject {
         
         var shot = Shot()
         

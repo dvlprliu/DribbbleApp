@@ -30,7 +30,7 @@ class ShotCell: UICollectionViewCell {
         self.addSubview(label)
         
         imageView = UIImageView(frame:CGRectMake(3,3,CGRectGetWidth(frame) - 6, CGRectGetHeight(frame) - 6 - 20))
-        imageView!.backgroundColor = UIColor.redColor()
+        imageView!.backgroundColor = UIColor.lightGrayColor()
         imageView!.contentMode = UIViewContentMode.ScaleAspectFill
         imageView!.clipsToBounds = true
         self.addSubview(imageView)
