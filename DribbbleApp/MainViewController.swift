@@ -12,6 +12,8 @@ class MainViewController: BaseViewController {
   
   let cellIdentifer = "ShotCell"
   
+  var refreshControl: UIRefreshControl!
+  
   @IBOutlet weak var tableView: UITableView!
   var shots: [Shot] = [Shot]() {
     didSet {
@@ -23,7 +25,26 @@ class MainViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setRefreshControl()
+    
+    loadShots()
+    
+    
+  }
+  
+  // MARK: - UI
+  
+  func setRefreshControl() {
+    self.refreshControl = UIRefreshControl(frame: CGRectZero)
+    refreshControl.addTarget(self, action: "reloadShots:", forControlEvents: UIControlEvents.ValueChanged)
+    tableView.addSubview(refreshControl)
+  }
+  
+  // MARK: - Loading data
+  
+  private func loadShots() {
     DribbbleManager.getShots(DribbbleManager.ListType.Popular, complation: { (JSON, someError) -> Void in
+      self.refreshControl.endRefreshing()
       if let error = someError {
         println("error : \(error)")
         return
@@ -36,12 +57,15 @@ class MainViewController: BaseViewController {
           var shot = Shot()
           shot.parse(shotJson)
           shots.append(shot)
-          println("width : \(shot.width)    height: \(shot.height)")
         }
         self.shots = shots
       }
     })
-    
+  }
+  
+  func reloadShots(sender: AnyObject!) {
+    refreshControl.beginRefreshing()
+    loadShots()
   }
   
   override func didReceiveMemoryWarning() {

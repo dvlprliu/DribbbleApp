@@ -5,6 +5,44 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Category View Controller-->
+        <scene sceneID="Ddc-Rh-ECC">
+            <objects>
+                <viewController id="vVa-lR-w2i" customClass="CategoryViewController" customModule="DribbbleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CXR-qi-fhd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpX-gD-63c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hJ1-6V-mQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50e-Zx-Em8">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="WkJ-we-WhJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="izg-bf-uGM"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Ee-PA-vkF" kind="unwind" unwindAction="cancle:" id="Y8y-f6-tql"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="50e-Zx-Em8" firstAttribute="top" secondItem="CXR-qi-fhd" secondAttribute="bottom" id="7yP-Jd-qqO"/>
+                            <constraint firstItem="50e-Zx-Em8" firstAttribute="leading" secondItem="hJ1-6V-mQ3" secondAttribute="leading" constant="16" id="M88-HB-f87"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ke5-4F-bQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0Ee-PA-vkF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="-268"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="p0I-QI-YYj">
             <objects>
@@ -27,18 +65,28 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m2J-T6-BJ5" id="owt-fG-s6a">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tB4-bJ-rdA">
+                                                    <rect key="frame" x="280" y="80" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="2fk-nY-2pN"/>
+                                                        <constraint firstAttribute="width" constant="40" id="6CH-tw-FtU"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oxl-6a-iLg">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="tB4-bJ-rdA" secondAttribute="centerY" id="1WS-b7-tnL"/>
                                                 <constraint firstAttribute="trailing" secondItem="Oxl-6a-iLg" secondAttribute="trailing" id="DEi-r6-vFI"/>
                                                 <constraint firstItem="Oxl-6a-iLg" firstAttribute="leading" secondItem="owt-fG-s6a" secondAttribute="leading" id="LGB-6v-RxK"/>
                                                 <constraint firstItem="Oxl-6a-iLg" firstAttribute="top" secondItem="owt-fG-s6a" secondAttribute="top" id="Ndg-le-E2L"/>
+                                                <constraint firstAttribute="centerX" secondItem="tB4-bJ-rdA" secondAttribute="centerX" id="VRr-pH-nUU"/>
                                                 <constraint firstAttribute="bottom" secondItem="Oxl-6a-iLg" secondAttribute="bottom" id="f6t-lL-toy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="loader" destination="tB4-bJ-rdA" id="zhq-gP-x4L"/>
                                             <outlet property="shotImageView" destination="Oxl-6a-iLg" id="hZ3-c0-DX2"/>
                                             <segue destination="iPz-Vj-drN" kind="show" identifier="ShowShotDetail" id="2aX-AD-5Nb"/>
                                         </connections>
@@ -60,6 +108,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="DWP-6f-2vs">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="39R-aV-QJI">
+                            <connections>
+                                <segue destination="vVa-lR-w2i" kind="presentation" identifier="ShotCatagory" id="MBm-xr-CKv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="yrL-AR-wgC" id="Dys-YH-OO9"/>
