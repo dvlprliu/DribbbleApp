@@ -10,16 +10,19 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
     
-    convenience init() {
+    convenience override init() {
         self.init(nibName:nil, bundle:nil)
     }
-    
 
+    required init(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

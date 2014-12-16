@@ -1,5 +1,4 @@
-platform :ios, '7.0'
+platform :ios, "7.0"
 
-pod 'SVProgressHUD'
-pod 'AFNetworking'
-pod 'Mantle'
+pod "SDWebImage", '~>3.6'
+
