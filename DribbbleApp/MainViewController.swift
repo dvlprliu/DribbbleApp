@@ -40,6 +40,10 @@ class MainViewController: BaseViewController {
     tableView.addSubview(refreshControl)
   }
   
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return .LightContent
+  }
+  
   // MARK: - Loading data
   
   private func loadShots() {
@@ -79,7 +83,20 @@ class MainViewController: BaseViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     if segue.identifier == "ShowShotDetail" {
-
+      let cell = sender as ShotCell
+      let indexPath = tableView.indexPathForCell(cell)
+      let selectedIndex = indexPath?.row
+      if let index = selectedIndex {
+        let selectedShot = shots[index]
+        let desVC = segue.destinationViewController as ShotDetailViewController
+        desVC.shot = selectedShot
+      }
+    }
+    
+    if segue.identifier == "ShowCategory" {
+      let desVC = segue.destinationViewController as CategoryViewController
+      let transitionManager = TransitionManager()
+      desVC.transitioningDelegate = transitionManager
     }
   }
 }

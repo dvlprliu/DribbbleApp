@@ -29,10 +29,13 @@ class ShotCell: UITableViewCell {
     if keyPath == "self.shotImageView.image" {
       if let image = change["new"] as? UIImage {
         loader.stopAnimating()
-        println("停止动画")
       }
       
     }
   }
-
+  
+  deinit {
+    println("\(__FUNCTION__)")
+    self.removeObserver(self, forKeyPath: "self.shotImageView.image")
+  }
 }

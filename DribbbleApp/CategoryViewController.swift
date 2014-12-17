@@ -10,10 +10,14 @@ import UIKit
 
 class CategoryViewController: UIViewController {
   
+  
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
   }
   
   override func didReceiveMemoryWarning() {
@@ -21,7 +25,11 @@ class CategoryViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func cancle(segue: UIStoryboardSegue) {
+  @IBAction func tapCancel(sender: AnyObject) {
+    
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  @IBAction func cancle(sender: UITapGestureRecognizer) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }
   

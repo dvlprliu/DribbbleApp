@@ -12,11 +12,14 @@
 		0B2E1A251A401D72009E7853 /* ShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A241A401D72009E7853 /* ShotCell.swift */; };
 		0B2E1A281A40231B009E7853 /* ShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A271A40231B009E7853 /* ShotDetailViewController.swift */; };
 		0B2E1A2C1A403952009E7853 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A2B1A403952009E7853 /* CategoryViewController.swift */; };
+		0B2E1A331A4124B9009E7853 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A321A4124B9009E7853 /* TransitionManager.swift */; };
 		0B3A51D51A40042D006FCCFD /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3A51CF1A400340006FCCFD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B3A51D71A40072A006FCCFD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A51D61A40072A006FCCFD /* SwiftyJSON.swift */; };
 		0B3A51DA1A400BFA006FCCFD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A51D91A400BFA006FCCFD /* Player.swift */; };
 		0B3A51DE1A400C21006FCCFD /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A51DD1A400C21006FCCFD /* JSONParser.swift */; };
 		0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */; };
+		0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */; };
+		0BF55F931A41788F0087379B /* ShotDetailTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */; };
 		37B66E4951944E90A96C65DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 566B67D7F76D4E2D998AB980 /* libPods.a */; };
 		461D7322194D6AD40044B372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D7321194D6AD40044B372 /* AppDelegate.swift */; };
 		461D7324194D6AD40044B372 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461D7323194D6AD40044B372 /* Images.xcassets */; };
@@ -79,11 +82,14 @@
 		0B2E1A241A401D72009E7853 /* ShotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCell.swift; sourceTree = "<group>"; };
 		0B2E1A271A40231B009E7853 /* ShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailViewController.swift; sourceTree = "<group>"; };
 		0B2E1A2B1A403952009E7853 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0B2E1A321A4124B9009E7853 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		0B3A51C91A40033F006FCCFD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		0B3A51D61A40072A006FCCFD /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0B3A51D91A400BFA006FCCFD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0B3A51DD1A400C21006FCCFD /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleManager.swift; sourceTree = "<group>"; };
+		0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailTableHeader.swift; sourceTree = "<group>"; };
+		0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailTableHeader.xib; sourceTree = "<group>"; };
 		461D731C194D6AD40044B372 /* DribbbleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461D7320194D6AD40044B372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461D7321194D6AD40044B372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2E1A311A41249B009E7853 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				0B2E1A321A4124B9009E7853 /* TransitionManager.swift */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
 		0B3A51CA1A40033F006FCCFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,15 @@
 				0B3A51D61A40072A006FCCFD /* SwiftyJSON.swift */,
 			);
 			name = Vender;
+			sourceTree = "<group>";
+		};
+		0BF55F8E1A4178560087379B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */,
+				0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		460B953C194DBC8C0061A24B /* Cell */ = {
@@ -176,6 +199,8 @@
 		461D731E194D6AD40044B372 /* DribbbleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0BF55F8E1A4178560087379B /* View */,
+				0B2E1A311A41249B009E7853 /* Transition */,
 				0B3A51DC1A400C0E006FCCFD /* Protocol */,
 				0BDE4CE21A3FFE4100C8CF04 /* Vender */,
 				461D7321194D6AD40044B372 /* AppDelegate.swift */,
@@ -355,6 +380,7 @@
 			files = (
 				461D7324194D6AD40044B372 /* Images.xcassets in Resources */,
 				0B2C63551A3E8F3E00AADF04 /* Main.storyboard in Resources */,
+				0BF55F931A41788F0087379B /* ShotDetailTableHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,12 +433,14 @@
 			files = (
 				0B2C63571A3E959E00AADF04 /* MainViewController.swift in Sources */,
 				0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */,
+				0B2E1A331A4124B9009E7853 /* TransitionManager.swift in Sources */,
 				0B2E1A251A401D72009E7853 /* ShotCell.swift in Sources */,
 				46523EB2194D7D9C00CBD927 /* Shot.swift in Sources */,
 				0B3A51DE1A400C21006FCCFD /* JSONParser.swift in Sources */,
 				0B2E1A281A40231B009E7853 /* ShotDetailViewController.swift in Sources */,
 				461D733C194D6B130044B372 /* BaseNavigationViewController.swift in Sources */,
 				469B864519512D1900FB55DF /* MTLShot.swift in Sources */,
+				0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */,
 				0B3A51D71A40072A006FCCFD /* SwiftyJSON.swift in Sources */,
 				461D7322194D6AD40044B372 /* AppDelegate.swift in Sources */,
 				0B2E1A2C1A403952009E7853 /* CategoryViewController.swift in Sources */,
@@ -480,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "8f419723-3640-471d-8c54-61937bca05ba";
@@ -518,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "8f419723-3640-471d-8c54-61937bca05ba";
 				SDKROOT = iphoneos;
