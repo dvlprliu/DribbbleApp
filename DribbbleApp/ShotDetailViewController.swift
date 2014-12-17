@@ -23,10 +23,10 @@ class ShotDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    
     let tableViewHeader  = NSBundle.mainBundle().loadNibNamed("ShotDetailTableHeader", owner: nil, options: nil).first as ShotDetailTableHeader
-//    tableView.tableHeaderView = tableViewHeader
+    tableView.tableHeaderView = tableViewHeader
     tableView.contentInset = UIEdgeInsets(top: 200-64, left: 0, bottom: 0, right: 0)
+    tableView.contentOffset = CGPoint(x: 0, y: 64 - 200)
     view.bringSubviewToFront(headerView)
     println(shot)
 

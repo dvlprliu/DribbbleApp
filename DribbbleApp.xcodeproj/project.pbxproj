@@ -20,6 +20,7 @@
 		0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */; };
 		0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */; };
 		0BF55F931A41788F0087379B /* ShotDetailTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */; };
+		0BF55F951A4180050087379B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF55F941A4180050087379B /* Comment.swift */; };
 		37B66E4951944E90A96C65DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 566B67D7F76D4E2D998AB980 /* libPods.a */; };
 		461D7322194D6AD40044B372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D7321194D6AD40044B372 /* AppDelegate.swift */; };
 		461D7324194D6AD40044B372 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461D7323194D6AD40044B372 /* Images.xcassets */; };
@@ -90,6 +91,7 @@
 		0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleManager.swift; sourceTree = "<group>"; };
 		0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailTableHeader.swift; sourceTree = "<group>"; };
 		0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailTableHeader.xib; sourceTree = "<group>"; };
+		0BF55F941A4180050087379B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		461D731C194D6AD40044B372 /* DribbbleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461D7320194D6AD40044B372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461D7321194D6AD40044B372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				46523EB1194D7D9C00CBD927 /* Shot.swift */,
 				0B3A51D91A400BFA006FCCFD /* Player.swift */,
+				0BF55F941A4180050087379B /* Comment.swift */,
 				469B864419512D1900FB55DF /* MTLShot.swift */,
 			);
 			name = Model;
@@ -442,6 +445,7 @@
 				469B864519512D1900FB55DF /* MTLShot.swift in Sources */,
 				0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */,
 				0B3A51D71A40072A006FCCFD /* SwiftyJSON.swift in Sources */,
+				0BF55F951A4180050087379B /* Comment.swift in Sources */,
 				461D7322194D6AD40044B372 /* AppDelegate.swift in Sources */,
 				0B2E1A2C1A403952009E7853 /* CategoryViewController.swift in Sources */,
 				0B3A51DA1A400BFA006FCCFD /* Player.swift in Sources */,
