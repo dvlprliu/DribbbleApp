@@ -29,9 +29,7 @@ class CategoryViewController: UIViewController {
     
     dismissViewControllerAnimated(true, completion: nil)
   }
-  @IBAction func cancle(sender: UITapGestureRecognizer) {
-    self.dismissViewControllerAnimated(true, completion: nil)
-  }
+
   
   /*
   // MARK: - Navigation

@@ -70,7 +70,7 @@ class Shot: JsonParser {
     self.createdAt = json["created_at"].stringValue
     self.user.parse(json["user"])
     
-    self.attachmentsCount = json["attachment_count"].intValue
+    self.attachmentsCount = json["attachments_count"].intValue
     self.bucketsCount = json["buckets_count"].intValue
     self.updatedAt = json["updated_at"].stringValue
     self.htmlURL = json["html_url"].stringValue

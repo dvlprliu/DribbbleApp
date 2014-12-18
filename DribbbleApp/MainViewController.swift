@@ -45,7 +45,7 @@ class MainViewController: BaseViewController {
   // MARK: - Loading data
   
   private func loadShots() {
-    DribbbleManager.getShots(DribbbleManager.ListType.Animated, complation: { (JSON, someError) -> Void in
+    DribbbleManager.getShots(DribbbleManager.ListType.Attachments, complation: { (JSON, someError) -> Void in
       self.refreshControl.endRefreshing()
       if let error = someError {
         println("error : \(error)")

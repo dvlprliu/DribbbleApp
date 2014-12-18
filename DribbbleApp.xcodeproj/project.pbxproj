@@ -19,6 +19,7 @@
 		0B3A51DE1A400C21006FCCFD /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A51DD1A400C21006FCCFD /* JSONParser.swift */; };
 		0B8915F91A427E770064104F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8915F81A427E770064104F /* Team.swift */; };
 		0B8915FD1A42B9930064104F /* UIScrollView+VGParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8915FC1A42B9930064104F /* UIScrollView+VGParallaxHeader.m */; };
+		0B8915FF1A42CD500064104F /* ShotDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8915FE1A42CD500064104F /* ShotDetailDataSource.swift */; };
 		0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */; };
 		0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */; };
 		0BF55F931A41788F0087379B /* ShotDetailTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */; };
@@ -93,6 +94,7 @@
 		0B8915F81A427E770064104F /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		0B8915FB1A42B9930064104F /* UIScrollView+VGParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+VGParallaxHeader.h"; sourceTree = "<group>"; };
 		0B8915FC1A42B9930064104F /* UIScrollView+VGParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+VGParallaxHeader.m"; sourceTree = "<group>"; };
+		0B8915FE1A42CD500064104F /* ShotDetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailDataSource.swift; sourceTree = "<group>"; };
 		0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleManager.swift; sourceTree = "<group>"; };
 		0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailTableHeader.swift; sourceTree = "<group>"; };
 		0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailTableHeader.xib; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				461D7323194D6AD40044B372 /* Images.xcassets */,
 				0B2C63541A3E8F3E00AADF04 /* Main.storyboard */,
 				461D731F194D6AD40044B372 /* Supporting Files */,
+				0B8915FE1A42CD500064104F /* ShotDetailDataSource.swift */,
 			);
 			path = DribbbleApp;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				0B2C63571A3E959E00AADF04 /* MainViewController.swift in Sources */,
 				0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */,
+				0B8915FF1A42CD500064104F /* ShotDetailDataSource.swift in Sources */,
 				0B2E1A331A4124B9009E7853 /* TransitionManager.swift in Sources */,
 				0B2E1A251A401D72009E7853 /* ShotCell.swift in Sources */,
 				46523EB2194D7D9C00CBD927 /* Shot.swift in Sources */,
