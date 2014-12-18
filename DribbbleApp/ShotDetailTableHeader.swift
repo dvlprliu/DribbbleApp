@@ -9,6 +9,12 @@
 import UIKit
 
 class ShotDetailTableHeader: UIView {
+  
+  class func nibView() -> UIView? {
+  
+    return NSBundle.mainBundle().loadNibNamed("ShotDetailTableHeader", owner: nil, options: nil).first as? UIView
+    
+  }
 
     /*
     // Only override drawRect: if you perform custom drawing.

@@ -21,14 +21,12 @@ class MainViewController: BaseViewController {
     }
   }
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setRefreshControl()
     
     loadShots()
-    
     
   }
   
@@ -57,10 +55,11 @@ class MainViewController: BaseViewController {
       if let json = JSON {
         
         var shots = [Shot]()
-        for shotJson in json["shots"].arrayValue {
+        for shotJson in json.arrayValue {
           var shot = Shot()
           shot.parse(shotJson)
           shots.append(shot)
+          
         }
         self.shots = shots
       }
@@ -113,7 +112,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifer) as ShotCell
     let shot = shots[indexPath.row]
-    let imageUrl = shot.imageUrl
+    let imageUrl = shot.normalImageURL
     cell.shot = shot
     cell.shotImageView.sd_setImageWithURL(NSURL(string: imageUrl))
     

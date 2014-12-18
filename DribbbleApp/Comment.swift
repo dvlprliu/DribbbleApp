@@ -14,14 +14,14 @@ class Comment: JsonParser {
   var body: String = ""
   var likesCount: Int = 0
   var createdAt: String = ""
-  var player:Player = Player()
+  var user:User = User()
   
   func parse(json: JSON) {
     id = json["id"].intValue
     body = json["body"].stringValue
     likesCount = json["likes_count"].intValue
     createdAt = json["created_at"].stringValue
-    player.parse(json["player"])
+    user.parse(json["player"])
   }
   
 }

@@ -3,3 +3,4 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIScrollView+VGParallaxHeader.h"

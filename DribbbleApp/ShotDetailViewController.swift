@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShotDetailViewController: UIViewController {
+class ShotDetailViewController: UIViewController, UIScrollViewDelegate {
   
   
   var shot: Shot? = nil
@@ -16,6 +16,7 @@ class ShotDetailViewController: UIViewController {
   private let AuthorCellIdentifer = "AuthorCell"
   private let AttetchmentCellIdentifer = "AttatchmentCell"
   private let TagCellIdentifer = "TagCell"
+  private let LikeCellIdentifier = "LikeCell"
   
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var tableView: UITableView!
@@ -23,11 +24,10 @@ class ShotDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let tableViewHeader  = NSBundle.mainBundle().loadNibNamed("ShotDetailTableHeader", owner: nil, options: nil).first as ShotDetailTableHeader
-    tableView.tableHeaderView = tableViewHeader
-    tableView.contentInset = UIEdgeInsets(top: 200-64, left: 0, bottom: 0, right: 0)
-    tableView.contentOffset = CGPoint(x: 0, y: 64 - 200)
-    view.bringSubviewToFront(headerView)
+    let headerView = ShotDetailTableHeader.nibView()
+    
+    tableView.setParallaxHeaderView(headerView, mode: VGParallaxHeaderMode.Fill, height: 100)
+
     println(shot)
 
   }
@@ -37,6 +37,9 @@ class ShotDetailViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    tableView.shouldPositionParallaxHeader()
+  }
   
   /*
   // MARK: - Navigation
@@ -53,7 +56,7 @@ class ShotDetailViewController: UIViewController {
 extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 4
+    return 5
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,8 +66,10 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     case 1:
       return 1
     case 2:
-      return 3
+      return 1
     case 3:
+      return 3;
+    case 4:
       return 10
     default:
       return 0
@@ -74,13 +79,15 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     switch indexPath.section {
     case 0:
-      return 149
+      return 77
     case 1:
-      return 44
-    case 2:
-      return 59
-    case 3:
       return 149
+    case 2:
+      return 44
+    case 3:
+      return 49
+    case 4:
+      return 120
     default:
       return 0
     }
@@ -91,26 +98,30 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     let section = indexPath.section
     let row = indexPath.row
-    
     if section == 0 {
+      let cell = tableView.dequeueReusableCellWithIdentifier(LikeCellIdentifier) as UITableViewCell
+    
+      return cell
+    }
+    else if section == 1 {
       let cell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as UITableViewCell
       
       return cell
     }
     
-    else if section == 1 {
+    else if section == 2 {
       let tagCell = tableView.dequeueReusableCellWithIdentifier(TagCellIdentifer) as UITableViewCell
       
       return tagCell
     }
     
-    else if section == 2 {
+    else if section == 3 {
       let attatchmentCell = tableView.dequeueReusableCellWithIdentifier(AttetchmentCellIdentifer) as UITableViewCell
       
       return attatchmentCell
     }
     
-    else if section == 3 {
+    else if section == 4 {
       let authCell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as UITableViewCell
       
       return authCell
