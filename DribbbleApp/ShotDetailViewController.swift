@@ -25,7 +25,7 @@ class ShotDetailViewController: UIViewController, UIScrollViewDelegate {
     
     let headerView = ShotDetailTableHeader.nibView()
     
-    tableView.setParallaxHeaderView(headerView, mode: VGParallaxHeaderMode.Fill, height: 100)
+    tableView.setParallaxHeaderView(headerView, mode: VGParallaxHeaderMode.Fill, height: 200)
     
   }
   
@@ -86,12 +86,16 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     let section = indexPath.section
     let row = indexPath.row
     if section == 0 {
-      let cell = tableView.dequeueReusableCellWithIdentifier(LikeCellIdentifier) as UITableViewCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(LikeCellIdentifier) as ShotLikesTableCell
+      
+      cell.shot = shot
       
       return cell
     }
     else if section == 1 {
-      let cell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as UITableViewCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as ShotInfoTableCell
+      
+      cell.shot = shot
       
       return cell
     }

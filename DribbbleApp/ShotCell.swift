@@ -2,40 +2,33 @@
 //  ShotCell.swift
 //  DribbbleApp
 //
-//  Created by Zhuang Liu on 14/12/16.
+//  Created by Zhuang Liu on 14/12/19.
 //  Copyright (c) 2014年 LLL. All rights reserved.
 //
 
 import UIKit
 
-class ShotCell: UITableViewCell {
+class ShotCell: UITableViewCell, ShotCellConfigure {
   
-  @IBOutlet weak var shotImageView: UIImageView!
-  @IBOutlet weak var loader: UIActivityIndicatorView!
-  
-  var shot:Shot? {
+  var shot: Shot? {
     didSet {
-      
+      configureCell(shot!)
     }
   }
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    loader.startAnimating()
-    self.addObserver(self, forKeyPath: "self.shotImageView.image", options: NSKeyValueObservingOptions.New, context: nil)
+  func configureCell(model: Shot) {
+    
   }
-  
-  override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-    if keyPath == "self.shotImageView.image" {
-      if let image = change["new"] as? UIImage {
-        loader.stopAnimating()
-      }
-      
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
-  }
-  
-  deinit {
-    println("\(__FUNCTION__)")
-    self.removeObserver(self, forKeyPath: "self.shotImageView.image")
-  }
+
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }

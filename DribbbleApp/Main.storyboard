@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShotCell" id="m2J-T6-BJ5" customClass="ShotCell" customModule="DribbbleApp" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShotListCell" id="m2J-T6-BJ5" customClass="ShotListCell" customModule="DribbbleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m2J-T6-BJ5" id="owt-fG-s6a">
@@ -167,13 +167,13 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LikeCell" rowHeight="82" id="Nzv-fQ-Vcy">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LikeCell" rowHeight="82" id="Nzv-fQ-Vcy" customClass="ShotLikesTableCell" customModule="DribbbleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nzv-fQ-Vcy" id="np6-Wb-gBF">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-qG-b3z">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-qG-b3z" customClass="UIControl">
                                                     <rect key="frame" x="0.0" y="0.0" width="200.5" height="81.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOY-Pn-fbo">
@@ -199,8 +199,11 @@
                                                         <constraint firstItem="eI3-AI-Ned" firstAttribute="centerX" secondItem="tOY-Pn-fbo" secondAttribute="centerX" constant="-0.25" id="QY4-kk-u7F"/>
                                                         <constraint firstItem="eI3-AI-Ned" firstAttribute="top" secondItem="tOY-Pn-fbo" secondAttribute="bottom" constant="8" id="eUW-MH-Vtt"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="viewLikes:" destination="Nzv-fQ-Vcy" eventType="touchUpInside" id="Tbp-oV-66s"/>
+                                                    </connections>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJP-PB-UdF">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJP-PB-UdF" customClass="UIControl">
                                                     <rect key="frame" x="399" y="0.0" width="200.5" height="81.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORs-Jy-Lwu">
@@ -227,7 +230,7 @@
                                                         <constraint firstItem="ORs-Jy-Lwu" firstAttribute="top" secondItem="kJP-PB-UdF" secondAttribute="top" constant="8" id="xFK-wa-Oar"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yR-qj-Diw">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yR-qj-Diw" customClass="UIControl">
                                                     <rect key="frame" x="200" y="0.0" width="200" height="81.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKo-3Z-bby">
@@ -253,6 +256,9 @@
                                                         <constraint firstItem="YKo-3Z-bby" firstAttribute="top" secondItem="3yR-qj-Diw" secondAttribute="top" constant="8" id="vFr-XB-Be7"/>
                                                         <constraint firstItem="YKo-3Z-bby" firstAttribute="centerX" secondItem="BIc-fL-otM" secondAttribute="centerX" constant="0.25" id="ycb-sZ-bJl"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="viewComments:" destination="Nzv-fQ-Vcy" eventType="touchUpInside" id="eHF-0f-jIA"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -270,8 +276,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="kJP-PB-UdF" secondAttribute="trailing" id="rdW-lq-r4e"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentsCountLabel" destination="BIc-fL-otM" id="HD2-DU-ep5"/>
+                                            <outlet property="likesCountLabel" destination="eI3-AI-Ned" id="Tqb-4U-BRc"/>
+                                            <outlet property="viewsCountLabel" destination="Mbi-3f-nUA" id="zoq-Ib-fj4"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorCell" rowHeight="125" id="lMT-Xb-g6i">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorCell" rowHeight="125" id="lMT-Xb-g6i" customClass="ShotInfoTableCell" customModule="DribbbleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lMT-Xb-g6i" id="KSa-bt-0Wf">
@@ -290,39 +301,47 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohP-0I-iPJ">
-                                                    <rect key="frame" x="66" y="8" width="39.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                    <color key="textColor" red="0.19514986545029256" green="0.6689427812919837" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10hrs" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jko-TJ-Gyr">
                                                     <rect key="frame" x="563" y="8" width="29" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.62614425505050497" green="0.62614425505050497" blue="0.62614425505050497" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQX-oM-rv6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="37.5" placeholderIntrinsicHeight="18" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQX-oM-rv6">
                                                     <rect key="frame" x="66" y="37" width="37.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohP-0I-iPJ">
+                                                    <rect key="frame" x="66" y="8" width="39.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" red="0.19514986545029256" green="0.6689427812919837" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="oQX-oM-rv6" secondAttribute="bottom" constant="10" id="406-Ww-ca4"/>
                                                 <constraint firstItem="fpn-dM-G8t" firstAttribute="top" secondItem="KSa-bt-0Wf" secondAttribute="topMargin" id="CDP-Mb-pBv"/>
                                                 <constraint firstItem="jko-TJ-Gyr" firstAttribute="trailing" secondItem="KSa-bt-0Wf" secondAttribute="trailingMargin" id="Ck7-p7-MFm"/>
                                                 <constraint firstItem="jko-TJ-Gyr" firstAttribute="top" secondItem="KSa-bt-0Wf" secondAttribute="topMargin" id="F8I-rS-bLN"/>
-                                                <constraint firstItem="jko-TJ-Gyr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ohP-0I-iPJ" secondAttribute="trailing" priority="250" constant="10" id="IhR-7K-snF"/>
+                                                <constraint firstItem="jko-TJ-Gyr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ohP-0I-iPJ" secondAttribute="trailing" constant="10" id="IhR-7K-snF"/>
                                                 <constraint firstItem="ohP-0I-iPJ" firstAttribute="leading" secondItem="fpn-dM-G8t" secondAttribute="trailing" constant="8" id="O36-Lc-t3I"/>
-                                                <constraint firstItem="ohP-0I-iPJ" firstAttribute="top" secondItem="KSa-bt-0Wf" secondAttribute="topMargin" id="U5G-YX-Btd"/>
+                                                <constraint firstItem="ohP-0I-iPJ" firstAttribute="top" secondItem="fpn-dM-G8t" secondAttribute="top" id="aDt-Rr-Cfc"/>
                                                 <constraint firstItem="oQX-oM-rv6" firstAttribute="leading" secondItem="fpn-dM-G8t" secondAttribute="trailing" constant="8" id="fZL-j0-nHD"/>
                                                 <constraint firstItem="fpn-dM-G8t" firstAttribute="leading" secondItem="KSa-bt-0Wf" secondAttribute="leadingMargin" id="kbN-m9-4lC"/>
                                                 <constraint firstItem="oQX-oM-rv6" firstAttribute="top" secondItem="ohP-0I-iPJ" secondAttribute="bottom" constant="8" id="n2E-6B-KGR"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="oQX-oM-rv6" secondAttribute="trailing" constant="10" id="rrw-uG-mhs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="fpn-dM-G8t" id="1Ze-hn-Q4X"/>
+                                            <outlet property="describLabel" destination="oQX-oM-rv6" id="NeM-wL-Jkb"/>
+                                            <outlet property="timeLabel" destination="jko-TJ-Gyr" id="HeM-Kx-yvR"/>
+                                            <outlet property="userLabel" destination="ohP-0I-iPJ" id="CKD-Tg-P7T"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TagCell" rowHeight="44" id="fNv-3O-UaQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TagCell" rowHeight="44" id="fNv-3O-UaQ" customClass="ShotTagTableCell" customModule="DribbbleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fNv-3O-UaQ" id="d05-9Q-Vn3">
@@ -341,7 +360,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94539655614452445" green="0.7250249593010667" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AttatchmentCell" rowHeight="55" id="i8D-nO-BGs">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AttatchmentCell" rowHeight="55" id="i8D-nO-BGs" customClass="ShotAttachmentCell" customModule="DribbbleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i8D-nO-BGs" id="0d8-Zh-jqK">

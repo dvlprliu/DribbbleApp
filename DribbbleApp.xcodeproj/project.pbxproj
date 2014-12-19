@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B2C63551A3E8F3E00AADF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2C63541A3E8F3E00AADF04 /* Main.storyboard */; };
 		0B2C63571A3E959E00AADF04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C63561A3E959E00AADF04 /* MainViewController.swift */; };
-		0B2E1A251A401D72009E7853 /* ShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A241A401D72009E7853 /* ShotCell.swift */; };
+		0B2E1A251A401D72009E7853 /* ShotListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A241A401D72009E7853 /* ShotListCell.swift */; };
 		0B2E1A281A40231B009E7853 /* ShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A271A40231B009E7853 /* ShotDetailViewController.swift */; };
 		0B2E1A2C1A403952009E7853 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A2B1A403952009E7853 /* CategoryViewController.swift */; };
 		0B2E1A331A4124B9009E7853 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E1A321A4124B9009E7853 /* TransitionManager.swift */; };
@@ -20,6 +20,12 @@
 		0B8915F91A427E770064104F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8915F81A427E770064104F /* Team.swift */; };
 		0B8915FD1A42B9930064104F /* UIScrollView+VGParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8915FC1A42B9930064104F /* UIScrollView+VGParallaxHeader.m */; };
 		0B8915FF1A42CD500064104F /* ShotDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8915FE1A42CD500064104F /* ShotDetailDataSource.swift */; };
+		0B8916021A43C33C0064104F /* ShotInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8916011A43C33C0064104F /* ShotInfoTableCell.swift */; };
+		0B8916051A43C3630064104F /* ShotLikesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8916041A43C3630064104F /* ShotLikesTableCell.swift */; };
+		0B8916071A43C3790064104F /* ShotAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8916061A43C3790064104F /* ShotAttachmentCell.swift */; };
+		0B8916091A43C3D40064104F /* ShotTagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8916081A43C3D40064104F /* ShotTagTableCell.swift */; };
+		0B89160D1A43CA900064104F /* CellConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B89160C1A43CA900064104F /* CellConfigure.swift */; };
+		0B8916111A43CB090064104F /* ShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8916101A43CB090064104F /* ShotCell.swift */; };
 		0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */; };
 		0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */; };
 		0BF55F931A41788F0087379B /* ShotDetailTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */; };
@@ -83,7 +89,7 @@
 		0999DBCC9F924BA793AB77DC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		0B2C63541A3E8F3E00AADF04 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0B2C63561A3E959E00AADF04 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0B2E1A241A401D72009E7853 /* ShotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCell.swift; sourceTree = "<group>"; };
+		0B2E1A241A401D72009E7853 /* ShotListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotListCell.swift; sourceTree = "<group>"; };
 		0B2E1A271A40231B009E7853 /* ShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailViewController.swift; sourceTree = "<group>"; };
 		0B2E1A2B1A403952009E7853 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0B2E1A321A4124B9009E7853 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
@@ -95,6 +101,12 @@
 		0B8915FB1A42B9930064104F /* UIScrollView+VGParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+VGParallaxHeader.h"; sourceTree = "<group>"; };
 		0B8915FC1A42B9930064104F /* UIScrollView+VGParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+VGParallaxHeader.m"; sourceTree = "<group>"; };
 		0B8915FE1A42CD500064104F /* ShotDetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailDataSource.swift; sourceTree = "<group>"; };
+		0B8916011A43C33C0064104F /* ShotInfoTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotInfoTableCell.swift; sourceTree = "<group>"; };
+		0B8916041A43C3630064104F /* ShotLikesTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotLikesTableCell.swift; sourceTree = "<group>"; };
+		0B8916061A43C3790064104F /* ShotAttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotAttachmentCell.swift; sourceTree = "<group>"; };
+		0B8916081A43C3D40064104F /* ShotTagTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotTagTableCell.swift; sourceTree = "<group>"; };
+		0B89160C1A43CA900064104F /* CellConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigure.swift; sourceTree = "<group>"; };
+		0B8916101A43CB090064104F /* ShotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCell.swift; sourceTree = "<group>"; };
 		0BDE4CE01A3FFADD00C8CF04 /* DribbbleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleManager.swift; sourceTree = "<group>"; };
 		0BF55F901A41787D0087379B /* ShotDetailTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailTableHeader.swift; sourceTree = "<group>"; };
 		0BF55F921A41788F0087379B /* ShotDetailTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailTableHeader.xib; sourceTree = "<group>"; };
@@ -155,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3A51DD1A400C21006FCCFD /* JSONParser.swift */,
+				0B89160C1A43CA900064104F /* CellConfigure.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -181,7 +194,12 @@
 		460B953C194DBC8C0061A24B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0B2E1A241A401D72009E7853 /* ShotCell.swift */,
+				0B2E1A241A401D72009E7853 /* ShotListCell.swift */,
+				0B8916011A43C33C0064104F /* ShotInfoTableCell.swift */,
+				0B8916041A43C3630064104F /* ShotLikesTableCell.swift */,
+				0B8916061A43C3790064104F /* ShotAttachmentCell.swift */,
+				0B8916081A43C3D40064104F /* ShotTagTableCell.swift */,
+				0B8916101A43CB090064104F /* ShotCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -445,20 +463,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8916091A43C3D40064104F /* ShotTagTableCell.swift in Sources */,
 				0B2C63571A3E959E00AADF04 /* MainViewController.swift in Sources */,
 				0BDE4CE11A3FFADD00C8CF04 /* DribbbleManager.swift in Sources */,
 				0B8915FF1A42CD500064104F /* ShotDetailDataSource.swift in Sources */,
 				0B2E1A331A4124B9009E7853 /* TransitionManager.swift in Sources */,
-				0B2E1A251A401D72009E7853 /* ShotCell.swift in Sources */,
+				0B2E1A251A401D72009E7853 /* ShotListCell.swift in Sources */,
 				46523EB2194D7D9C00CBD927 /* Shot.swift in Sources */,
+				0B8916111A43CB090064104F /* ShotCell.swift in Sources */,
 				0B3A51DE1A400C21006FCCFD /* JSONParser.swift in Sources */,
 				0B2E1A281A40231B009E7853 /* ShotDetailViewController.swift in Sources */,
+				0B8916021A43C33C0064104F /* ShotInfoTableCell.swift in Sources */,
 				461D733C194D6B130044B372 /* BaseNavigationViewController.swift in Sources */,
 				0B8915F91A427E770064104F /* Team.swift in Sources */,
+				0B8916051A43C3630064104F /* ShotLikesTableCell.swift in Sources */,
 				469B864519512D1900FB55DF /* MTLShot.swift in Sources */,
 				0B8915FD1A42B9930064104F /* UIScrollView+VGParallaxHeader.m in Sources */,
 				0BF55F911A41787D0087379B /* ShotDetailTableHeader.swift in Sources */,
+				0B89160D1A43CA900064104F /* CellConfigure.swift in Sources */,
 				0B3A51D71A40072A006FCCFD /* SwiftyJSON.swift in Sources */,
+				0B8916071A43C3790064104F /* ShotAttachmentCell.swift in Sources */,
 				0BF55F951A4180050087379B /* Comment.swift in Sources */,
 				461D7322194D6AD40044B372 /* AppDelegate.swift in Sources */,
 				0B2E1A2C1A403952009E7853 /* CategoryViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: BaseViewController {
   
-  let cellIdentifer = "ShotCell"
+  let cellIdentifer = "ShotListCell"
   
   var refreshControl: UIRefreshControl!
   
@@ -82,7 +82,7 @@ class MainViewController: BaseViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     if segue.identifier == "ShowShotDetail" {
-      let cell = sender as ShotCell
+      let cell = sender as ShotListCell
       let indexPath = tableView.indexPathForCell(cell)
       let selectedIndex = indexPath?.row
       if let index = selectedIndex {
@@ -110,7 +110,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifer) as ShotCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifer) as ShotListCell
     let shot = shots[indexPath.row]
     let imageUrl = shot.normalImageURL
     cell.shot = shot
