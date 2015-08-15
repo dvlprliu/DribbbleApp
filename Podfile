@@ -1,5 +1,12 @@
-platform :ios, "7.0"
+platform :ios, "8.0"
 
-pod "SDWebImage", '~>3.6'
+use_frameworks!
+
+pod "SDWebImage" 
 pod "PureLayout"
+pod "SwiftyJSON"
+pod "Alamofire"
+pod "Moya"
+pod "ObjectMapper"
+pod "SVProgressHUD"
 

@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
         // Custom initialization
     }
     
-    convenience override init() {
+    convenience init() {
         self.init(nibName:nil, bundle:nil)
     }
 

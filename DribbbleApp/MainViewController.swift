@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MainViewController: BaseViewController {
   
@@ -82,18 +83,18 @@ class MainViewController: BaseViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     if segue.identifier == "ShowShotDetail" {
-      let cell = sender as ShotListCell
+      let cell = sender as! ShotListCell
       let indexPath = tableView.indexPathForCell(cell)
       let selectedIndex = indexPath?.row
       if let index = selectedIndex {
         let selectedShot = shots[index]
-        let desVC = segue.destinationViewController as ShotDetailViewController
+        let desVC = segue.destinationViewController as! ShotDetailViewController
         desVC.shot = selectedShot
       }
     }
     
     if segue.identifier == "ShowCategory" {
-      let desVC = segue.destinationViewController as CategoryViewController
+      let desVC = segue.destinationViewController as! CategoryViewController
       let transitionManager = TransitionManager()
       desVC.transitioningDelegate = transitionManager
     }
@@ -110,7 +111,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifer) as ShotListCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifer) as! ShotListCell
     let shot = shots[indexPath.row]
     let imageUrl = shot.normalImageURL
     cell.shot = shot

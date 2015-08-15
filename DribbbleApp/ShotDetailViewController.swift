@@ -94,14 +94,14 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     let section = indexPath.section
     let row = indexPath.row
     if section == 0 {
-      let cell = tableView.dequeueReusableCellWithIdentifier(LikeCellIdentifier) as ShotLikesTableCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(LikeCellIdentifier) as! ShotLikesTableCell
       
       cell.shot = shot
       
       return cell
     }
     else if section == 1 {
-      let cell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as ShotInfoTableCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as! ShotInfoTableCell
       
       cell.shot = shot
       
@@ -109,19 +109,19 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
       
     else if section == 2 {
-      let tagCell = tableView.dequeueReusableCellWithIdentifier(TagCellIdentifer) as UITableViewCell
+      let tagCell = tableView.dequeueReusableCellWithIdentifier(TagCellIdentifer) as! UITableViewCell
       
       return tagCell
     }
       
     else if section == 3 {
-      let attatchmentCell = tableView.dequeueReusableCellWithIdentifier(AttetchmentCellIdentifer) as UITableViewCell
+      let attatchmentCell = tableView.dequeueReusableCellWithIdentifier(AttetchmentCellIdentifer) as! UITableViewCell
       
       return attatchmentCell
     }
       
     else if section == 4 {
-      let commentCell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as UITableViewCell
+      let commentCell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as! UITableViewCell
       
       return commentCell
     }
