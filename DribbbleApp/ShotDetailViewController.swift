@@ -20,12 +20,20 @@ class ShotDetailViewController: UIViewController, UIScrollViewDelegate {
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var tableView: UITableView!
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     let headerView = ShotDetailTableHeader.nibView()
     
     tableView.setParallaxHeaderView(headerView, mode: VGParallaxHeaderMode.Fill, height: 200)
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 44.0
+    
+    
+  }
+  
+  func getComment(shot: Shot) {
     
   }
   
@@ -113,9 +121,9 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
       
     else if section == 4 {
-      let authCell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as UITableViewCell
+      let commentCell = tableView.dequeueReusableCellWithIdentifier(AuthorCellIdentifer) as UITableViewCell
       
-      return authCell
+      return commentCell
     }
       
     else {
@@ -123,21 +131,21 @@ extension ShotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
   }
   
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    switch indexPath.section {
-    case 0:
-      return 86
-    case 1:
-      return 149
-    case 2:
-      return 44
-    case 3:
-      return 49
-    case 4:
-      return 120
-    default:
-      return 0
-    }
-  }
+//  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//    switch indexPath.section {
+//    case 0:
+//      return 86
+//    case 1:
+//      return 149
+//    case 2:
+//      return 44
+//    case 3:
+//      return 49
+//    case 4:
+//      return 120
+//    default:
+//      return 0
+//    }
+//  }
 }
 
