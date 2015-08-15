@@ -1,5 +1,10 @@
-platform :ios, "7.0"
+platform :ios, "8.0"
 
-pod "SDWebImage", '~>3.6'
-pod "PureLayout"
+use_frameworks!
+
+pod 'SDWebImage'
+pod 'PureLayout'
+pod 'Moya'
+pod 'ReactiveCocoa', '~> 3.0-RC.1'
+pod 'SVProgressHUD'
 
